@@ -35,16 +35,57 @@
 				-webkit-border-radius: 0px; /* workaround for ios safari */
 			}
 
+			
+			
 			#search button {
-				color: #0080ff;
+				color: #0080ff;				
+				box-shadow:2px 2px 8px #aaa;
+				font:bold 13px Arial;
+				border-radius:50%;
 				background-color: transparent;
-				border: 1px solid #2d0934;
-				border-radius : 4px;
-				padding: 10px;
-				font-size: 20px;
+				border: 1px solid #2d0934;				
+				padding: 8px;
+				font-size: 15px;
 				text-transform: uppercase;
-				cursor: pointer;
+				
 			}
+			
+			
+			#button{				
+				width:100px;
+				height:100px;
+		    }
+			
+			#button2{				
+				width:75px;
+				height:75px;
+		    }
+			
+			#button3{				
+				width:75px;
+				height:75px;
+		    }
+			
+			#button4{				
+				width:100px;
+				height:100px;
+		    }		
+
+			
+			#button:hover{				
+				width:150px ; height:150px
+			}
+			#button2:hover{				
+				width:100px ; height:100px
+			}
+			#button3:hover{				
+				width:100px ; height:100px
+			}
+			#button4:hover{				
+				width:150px ; height:150px
+			}
+			
+			
 		</style>
 	</head>
 	<body>
@@ -54,7 +95,7 @@
 		<script src="CSS3DRenderer.js"></script>
 
 		<div id="container"></div>
-		<div id="search"><button id="button">Video</button><button id="button2">Web</button><input id="query" type="text" placeholder="Search" ><button id="button3">Image</button><button id="button4">News</button></div>
+		<div id="search"><button id="button">Video</button><button id="button2">Web</button><input id="query" type="text" placeholder="Search" ><button id="button3">News</button><button id="button4">Image</button></div>
 
 		<script>
 			var camera, scene, renderer;
