@@ -1,0 +1,78 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	background-image:url(photo.jpg);
+	margin: 0;
+	font-family: Arial;
+	overflow: hidden;
+}
+
+#search {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+	text-align: center;
+}
+
+#search input {
+	color: #ffffff;
+	background-color: transparent;
+	border: 1px solid #0080ff;
+	padding: 10px;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+	-webkit-border-radius: 0px; /* workaround for ios safari */
+}
+
+
+
+#search button {
+	color: #0080ff;				
+	box-shadow:2px 2px 8px #aaa;
+	font:bold 13px Arial;
+	border-radius:50%;
+	background-color: transparent;
+	border: 1px solid #2d0934;				
+	padding: 8px;
+	font-size: 15px;
+	text-transform: uppercase;
+	
+}
+
+
+#button{				
+	width:100px;
+	height:100px;
+}
+
+#button2{				
+	width:75px;
+	height:75px;
+}
+
+#button3{				
+	width:75px;
+	height:75px;
+}
+
+#button4{				
+	width:100px;
+	height:100px;
+}		
+
+
+#button:hover{				
+	width:150px ; height:150px
+}
+#button2:hover{				
+	width:100px ; height:100px
+}
+#button3:hover{				
+	width:100px ; height:100px
+}
+#button4:hover{				
+	width:150px ; height:150px
+}
