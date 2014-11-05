@@ -4,9 +4,95 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<<<<<<< HEAD
 		<link rel="stylesheet" href="style.css" />
 		<title>Animation</title>
 		
+=======
+		<title>three.js css3d - youtube</title>
+		<style>
+			html, body {
+				height: 100%;
+			}
+
+			body {
+				background-color: #000000;
+				margin: 0;
+				font-family: Arial;
+				overflow: hidden;
+			}
+
+			#search {
+				position: absolute;
+				bottom: 30px;
+				width: 100%;
+				text-align: center;
+			}
+
+		#search button {
+				color: #0080ff;
+				color: #0080ff;				
+				box-shadow:2px 2px 8px #aaa;
+				font:bold 13px Arial;
+				border-radius:50%;
+				background-color: transparent;
+				border: 1px solid #2d0934;
+				border-radius : 4px;
+				padding: 10px;
+				font-size: 20px;
+				border: 1px solid #2d0934;				
+				padding: 8px;
+				font-size: 15px;
+				text-transform: uppercase;
+				cursor: pointer;
+				
+			}
+
+			#search button {
+				color: #0080ff;
+				background-color: transparent;
+				border: 1px solid #2d0934;
+				border-radius : 4px;
+				padding: 10px;
+				font-size: 20px;
+				text-transform: uppercase;
+				cursor: pointer;
+			}
+			#button{				
+				width:100px;
+				height:100px;
+		    }
+			
+			#button2{				
+				width:75px;
+				height:75px;
+		    }
+			
+			#button3{				
+				width:75px;
+				height:75px;
+		    }
+			
+			#button4{				
+				width:100px;
+				height:100px;
+		    }		
+
+			
+			#button:hover{				
+				width:150px ; height:150px
+			}
+			#button2:hover{				
+				width:100px ; height:100px
+			}
+			#button3:hover{				
+				width:100px ; height:100px
+			}
+			#button4:hover{				
+				width:150px ; height:150px
+			}
+		</style>
+>>>>>>> origin/master
 	</head>
 	<body>
 		<script src="three.min.js"></script>
@@ -15,7 +101,9 @@
 		<script src="CSS3DRenderer.js"></script>
 
 		<div id="container"></div>
-		<div id="search"><button id="button">Video</button><button id="button2">Web</button><input id="query" type="text" placeholder="Search" ><button id="button3">News</button><button id="button4">Image</button></div>
+		<div id="search"><button id="button">Video</button>
+		<button id="button2">Web</button><input id="query" type="text" placeholder="Search" >
+		<button id="button3">Image</button><button id="button4">News</button></div>
 
 		<script>
 			var camera, scene, renderer;
