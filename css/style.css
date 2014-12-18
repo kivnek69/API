@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-	background-image:url(../photo.jpg);
+	background-image:url(../images/photo.jpg);
 	margin: 0;
 	font-family: Arial;
 	overflow: hidden;
