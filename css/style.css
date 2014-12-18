@@ -3,7 +3,7 @@ html, body {
 }
 
 body {
-	background-image:url(photo.jpg);
+	background-image:url(../photo.jpg);
 	margin: 0;
 	font-family: Arial;
 	overflow: hidden;
@@ -15,6 +15,7 @@ body {
 	width: 100%;
 	text-align: center;
 }
+
 
 #search input {
 	color: #ffffff;
