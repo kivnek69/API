@@ -2,21 +2,104 @@
 <html>
 <head>
 	<meta charset="UTF-8">
+        <title>News</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" />
 	<script src="js/three.min.js"></script>
 	<script src="js/tween.min.js"></script>
 	<script src="js/CSS3DRenderer.js"></script>
-<title>News</title>
+        <script src="tagcanvas.min.js"></script>   
+        <script src="https://www.google.com/jsapi"
+        type="text/javascript"></script>
+    
+<script type="text/javascript">
+//<![CDATA[
+var oopts = {
+ textFont: 'Impact,Arial Black,sans-serif',
+ textHeight: 20,
+ maxSpeed: 0.1,
+ decel: 0.9,
+ depth: 0.99,
+ outlineColour: '#f6f',
+ outlineThickness: 3,
+ pulsateTo: 0.2,
+ pulsateTime: 0.5,
+ wheelZoom: false
+}, ttags = 'taglist', lock, shape = 'sphere';
+window.onload = function() {
+ TagCanvas.textFont = 'Trebuchet MS, Helvetica, sans-serif';
+ TagCanvas.textColour = '#00f';
+ TagCanvas.textHeight = 25;
+ TagCanvas.outlineMethod = 'block';
+ TagCanvas.outlineColour = '#acf';
+ TagCanvas.maxSpeed = 0.03;
+ TagCanvas.minBrightness = 0.2;
+ TagCanvas.depth = 0.92;
+ TagCanvas.pulsateTo = 0.6;
+ TagCanvas.initial = [0.1,-0.1];
+ TagCanvas.decel = 0.98;
+ TagCanvas.reverse = true;
+ TagCanvas.hideTags = false;
+ TagCanvas.shadow = '#ccf';
+ TagCanvas.shadowBlur = 3;
+ TagCanvas.weight = false;
+ TagCanvas.imageScale = null;
+ TagCanvas.fadeIn = 1000;
+ TagCanvas.clickToFront = 600;
+ try {
+  TagCanvas.Start('tagcanvas','taglist');
+  TagCanvas.Start('smallCanvas','moreTags', oopts);
+  f('options');
+ } catch(e) {
+  //document.getElementById('cmsg').style.display='none';
+  document.getElementsByTagName('canvas')[0].style.border='0';
+ }
+};
+function BGImage(e) {
+ document.getElementById('tagcanvas').style.backgroundImage = (e.checked ? 'url(images/canvas_bg1.png)' : 'none');
+}
+function f(a) {
+ TagCanvas.Start('otherCanvas',a,oopts);
+ return false;
+}
+function restart() {
+ TagCanvas.shape = shape;
+ TagCanvas.lock = lock;
+ TagCanvas.Start('tagcanvas',ttags);
+}
+function changetags(t) {
+ ttags = t;
+ restart();
+}
+function changeshape(s) {
+ var locks = { hcylinder: 'x', vcylinder: 'y', hring: 'x', vring: 'y', sphere: '' };
+ lock = locks[s] || '';
+ shape = s;
+ TagCanvas.initial = (lock == 'x' && [0,0.2]) || (lock == 'y' && [0.2,0]) || [0.2,0.2];
+ restart();
+}
+function tpu(s) {
+ document.getElementById('sout').innerHTML = s.innerHTML;
+ return false;
+}
+//]]>
+</script>
+    
+
 </head>
 <body>
-	<div id="container"></div>
-	<div id="search">
-			<a href="Videos.html"><button id="button" >Video</button></a>
-			<a href="Web.html"><button id="button2">Web</button></a>
-				<input id="query" type="text" placeholder="Search" >
-			<a href="Images.html"><button id="button3">Image</button></a>
-			<a href="#"><button id="button4">News</button></a>
-		</div>
+    <div style="margin-left:5px;border: 2px solid black;  width: 1355px; height:350pw;   " >    
+            <canvas id="tagcanvas" width="1300" height="450" style="">
+                <img src="images/tagcanvas.png" width="200" height="150">
+            </canvas>
+            <div style="display: none; " >
+              <div id="taglist">
+                  hhhhh
+              </div>
+           </div>
+        </div>
+  
+
+
 </body>
 </html>
